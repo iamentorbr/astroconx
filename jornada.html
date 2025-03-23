@@ -150,9 +150,19 @@
           <a href="triade.html">Acessar Jornada</a>
           <a href="#">📥 Baixar PDF</a>
           <a href="#">📝 Abrir Diário da Jornada</a>
+<div id="diario-social" style="display:none; margin-top:1rem;">
+  <textarea id="entrada-social" rows="4" placeholder="Escreva aqui sua reflexão..." style="width:100%; max-width:100%;"></textarea><br>
+  <button onclick="salvarRegistro('social')" style="margin-top:0.5rem;">Salvar Registro</button>
+  <div id="registros-social" style="margin-top:1rem; text-align:left;"></div>
+</div>
+<div id="diario-emocao" style="display:none; margin-top:1rem;">
+  <textarea id="entrada-emocao" rows="4" placeholder="Escreva aqui sua reflexão..." style="width:100%; max-width:100%;"></textarea><br>
+  <button onclick="salvarRegistro('emocao')" style="margin-top:0.5rem;">Salvar Registro</button>
+  <div id="registros-emocao" style="margin-top:1rem; text-align:left;"></div>
+</div>
 <div id="diario-triade" style="display:none; margin-top:1rem;">
   <textarea id="entrada-triade" rows="4" placeholder="Escreva aqui sua reflexão..." style="width:100%; max-width:100%;"></textarea><br>
-  <button onclick="salvarRegistro()" style="margin-top:0.5rem;">Salvar Registro</button>
+  <button onclick="salvarRegistro('triade')" style="margin-top:0.5rem;">Salvar Registro</button>
   <div id="registros-triade" style="margin-top:1rem; text-align:left;"></div>
 </div>
         </div>
@@ -168,11 +178,6 @@
           <a href="emocao.html">Continuar Jornada</a>
           <a href="#">📥 Baixar PDF</a>
           <a href="#">📝 Abrir Diário da Jornada</a>
-<div id="diario-triade" style="display:none; margin-top:1rem;">
-  <textarea id="entrada-triade" rows="4" placeholder="Escreva aqui sua reflexão..." style="width:100%; max-width:100%;"></textarea><br>
-  <button onclick="salvarRegistro()" style="margin-top:0.5rem;">Salvar Registro</button>
-  <div id="registros-triade" style="margin-top:1rem; text-align:left;"></div>
-</div>
         </div>
       </div>
 
@@ -186,39 +191,35 @@
           <a href="social.html">Iniciar Jornada</a>
           <a href="#">📥 Baixar PDF</a>
           <a href="#">📝 Abrir Diário da Jornada</a>
-<div id="diario-triade" style="display:none; margin-top:1rem;">
-  <textarea id="entrada-triade" rows="4" placeholder="Escreva aqui sua reflexão..." style="width:100%; max-width:100%;"></textarea><br>
-  <button onclick="salvarRegistro()" style="margin-top:0.5rem;">Salvar Registro</button>
-  <div id="registros-triade" style="margin-top:1rem; text-align:left;"></div>
-</div>
         </div>
       </div>
     </div>
   </section>
 
 <script>
-function toggleDiario() {
-  const diario = document.getElementById('diario-triade');
+function toggleDiario(id) {
+  const diario = document.getElementById('diario-' + id);
   diario.style.display = diario.style.display === 'block' ? 'none' : 'block';
-  carregarRegistros();
+  carregarRegistros(id);
 }
 
-function salvarRegistro() {
-  const texto = document.getElementById('entrada-triade').value.trim();
+function salvarRegistro(id) {
+  const texto = document.getElementById('entrada-' + id).value.trim();
   if (!texto) return;
-  const registros = JSON.parse(localStorage.getItem('diario-triade')) || [];
+  const registros = JSON.parse(localStorage.getItem('diario-' + id)) || [];
   const data = new Date().toLocaleDateString('pt-BR');
   registros.unshift({ data, texto });
-  localStorage.setItem('diario-triade', JSON.stringify(registros));
-  document.getElementById('entrada-triade').value = '';
-  carregarRegistros();
+  localStorage.setItem('diario-' + id, JSON.stringify(registros));
+  document.getElementById('entrada-' + id).value = '';
+  carregarRegistros(id);
 }
 
-function carregarRegistros() {
-  const registros = JSON.parse(localStorage.getItem('diario-triade')) || [];
-  const lista = document.getElementById('registros-triade');
+function carregarRegistros(id) {
+  const registros = JSON.parse(localStorage.getItem('diario-' + id)) || [];
+  const lista = document.getElementById('registros-' + id);
   lista.innerHTML = registros.map(r => `<p><strong>[${r.data}]</strong> ${r.texto}</p>`).join('');
 }
 </script>
+
 </body>
 </html>
