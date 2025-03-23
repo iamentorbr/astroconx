@@ -1,85 +1,124 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resultado - AstroConX</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>AstroConX - Resultado</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-size: 1.15rem;
-    }
-
-    .protocolo {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #ffd700;
-      border-radius: 16px;
+      font-family: sans-serif;
+      background-color: #0d0d0d;
+      color: white;
       padding: 2rem;
-      margin-bottom: 2rem;
       text-align: center;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
     }
 
-    .protocolo h2 {
-      font-family: 'Cinzel Decorative', cursive;
+    h1 {
       color: #ffd700;
       margin-bottom: 1rem;
     }
 
-    .protocolo p {
+    p.intro {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      color: #fff;
+      max-width: 800px;
+      margin: 0 auto 2rem;
     }
 
-    .botao-protocolo {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background-color: #8a2be2;
-      color: #fff;
+    .card {
+      min-height: 250px;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 800px;
+      text-align: left;
+      position: relative;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #ffd700;
+    }
+
+    .expand-btn {
+      background-color: transparent;
       border: none;
-      border-radius: 8px;
-      text-decoration: none;
+      color: #8a2be2;
+      cursor: pointer;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
     }
 
-    .botao-protocolo:hover {
+    .card .conteudo {
+      font-size: 1rem;
+      display: none;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    .card button.protocolo-btn {
+      margin-top: 1rem;
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button.protocolo-btn:hover {
       background-color: #6a1bbf;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🌟 Resultado AstroConX</h1>
-    <p>Sua jornada astrológica começa agora</p>
-  </header>
+  <h1>RESULTADO DA SUA JORNADA</h1>
+  <p class="intro">
+    Com base nos dados do seu mapa, identificamos caminhos possíveis para seu despertar interior.<br>
+    Cada jornada foi desenhada para alinhar sua consciência, suas emoções e sua forma de se comunicar com o mundo.
+  </p>
 
-  <main class="container">
-    <section class="protocolo">
-      <h2>☀️🌙🌀 Tríade da Consciência</h2>
-      <p>Entenda como Sol, Lua e Ascendente revelam seu propósito, essência e forma de expressão no mundo.</p>
-      <a class="botao-protocolo" href="triade.html">ACESSE O SEU PROTOCOLO</a>
-    </section>
+  <div class="card">
+    <h2>🌞 Tríade da Consciência</h2>
+    <p>A essência da sua jornada está no reconhecimento da sua luz interior, da sua natureza emocional e da forma como se projeta no mundo.</p>
+    <button class="expand-btn" onclick="toggleConteudo(this)">🔍 Expandir Análise</button>
+    <div class="conteudo">
+      <p>Aqui vamos inserir o texto ASTROTERAPÊUTICO específico com base nos signos do Sol, Lua e Ascendente.
+      Você poderá compreender seu centro vital, sua sensibilidade e como se relaciona com o ambiente a partir da sua individualidade.
+      Este protocolo te convida a acessar sua essência mais verdadeira em 30 dias de consciência profunda.</p>
+    </div>
+    <button class="protocolo-btn" onclick="window.location.href='triade.html'">ACESSE O SEU PROTOCOLO</button>
+  </div>
 
-    <section class="protocolo">
-      <h2>💖🔥♀ Emoções Sociais</h2>
-      <p>Explore os aspectos emocionais e relacionais da sua vida guiado pela Lua, Marte e Vênus.</p>
-      <a class="botao-protocolo" href="emocao.html">ACESSE O SEU PROTOCOLO</a>
-    </section>
+  <div class="card">
+    <h2>💖 Emoções Sociais</h2>
+    <p>Como você sente, ama e reage diante das suas relações e conexões afetivas com o mundo.</p>
+    <button class="expand-btn" onclick="toggleConteudo(this)">🔍 Expandir Análise</button>
+    <div class="conteudo">
+      <p>Baseado na sua Lua, Marte e Vênus, este protocolo vai aprofundar sua capacidade de nutrir, se posicionar, sentir prazer e criar relações saudáveis.
+      A proposta é guiar você a um mergulho emocional que reconhece seus desejos, carências e forças internas com amor e clareza.</p>
+    </div>
+    <button class="protocolo-btn" onclick="window.location.href='emocao.html'">ACESSE O SEU PROTOCOLO</button>
+  </div>
 
-    <section class="protocolo">
-      <h2>🗣️📡🔭 Comunicação Social</h2>
-      <p>Descubra como você se comunica, se projeta e influencia o meio à sua volta com Ascendente, Mercúrio e Meio do Céu.</p>
-      <a class="botao-protocolo" href="social.html">ACESSE O SEU PROTOCOLO</a>
-    </section>
+  <div class="card">
+    <h2>🗣️ Comunicação Social</h2>
+    <p>A forma como você se expressa, se comunica e realiza seu papel no coletivo.</p>
+    <button class="expand-btn" onclick="toggleConteudo(this)">🔍 Expandir Análise</button>
+    <div class="conteudo">
+      <p>Com base no seu Ascendente, Mercúrio e Meio do Céu, esse protocolo vai te mostrar como você é percebido socialmente, como se comunica e para onde está se dirigindo em termos de propósito.
+      É um convite para alinhar a expressão da sua voz com a missão que você veio cumprir.</p>
+    </div>
+    <button class="protocolo-btn" onclick="window.location.href='social.html'">ACESSE O SEU PROTOCOLO</button>
+  </div>
 
-    <a class="voltar" href="index.html">← Voltar para o início</a>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Despertar Astroconsciente. Todos os direitos reservados.</p>
-  </footer>
+  <script>
+    function toggleConteudo(botao) {
+      const conteudo = botao.nextElementSibling;
+      conteudo.style.display = conteudo.style.display === 'block' ? 'none' : 'block';
+      botao.textContent = conteudo.style.display === 'block' ? '🔽 Recolher' : '🔍 Expandir Análise';
+    }
+  </script>
 </body>
 </html>
