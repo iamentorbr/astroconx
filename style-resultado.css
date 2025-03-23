@@ -1,0 +1,75 @@
+
+body {
+  font-family: sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+p.intro {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+  border: 2px solid #ffd700;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+.expand-btn {
+  background-color: #d9d9d9;
+  border: none;
+  color: #1e1e1e;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.expand-btn:hover {
+  background-color: #c4c4c4;
+}
+
+.card .conteudo {
+  display: none;
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.card button.protocolo-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.card button.protocolo-btn:hover {
+  background-color: #6a1bbf;
+}
