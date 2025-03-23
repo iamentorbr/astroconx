@@ -1,23 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro de Usuário - AstroConX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Despertar Astroconsciente</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: sans-serif; background-color: #0d0d0d; color: white; padding: 2rem;">
-  <h1>✨ Crie sua Conta</h1>
-  <form action="cadastro-mapa.html" method="GET">
-    <label>Nome completo:</label><br>
-    <input type="text" name="nome" required><br><br>
+<body>
+  <header>
+    <h1>🌙 Cadastro Astrológico</h1>
+    <p>Preencha seus dados para receber sua análise personalizada</p>
+  </header>
 
-    <label>E-mail:</label><br>
-    <input type="email" name="email" required><br><br>
+  <main>
+    <form action="#" method="post" class="formulario">
+      <label for="nome">Nome completo:</label><br>
+      <input type="text" id="nome" name="nome" required><br><br>
 
-    <label>Senha:</label><br>
-    <input type="password" name="senha" required><br><br>
+      <label for="data">Data de nascimento:</label><br>
+      <input type="date" id="data" name="data" required><br><br>
 
-    <button type="submit">CRIAR CONTA</button>
-  </form>
+      <label for="hora">Hora de nascimento:</label><br>
+      <input type="time" id="hora" name="hora" required><br><br>
+
+      <label for="cidade">Cidade de nascimento:</label><br>
+      <input type="text" id="cidade" name="cidade" required><br><br>
+
+      <button type="submit" class="botao">Gerar meu mapa</button>
+    </form>
+    <br>
+    <a href="index.html">← Voltar para Home</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Despertar Astroconsciente. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
