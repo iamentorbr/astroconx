@@ -1,41 +1,129 @@
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - Despertar Astroconsciente</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Jornada Astroconsciente - Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #6a1bbf;
+    }
+
+    .instrucoes {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #262626;
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+    }
+
+    .instrucoes a {
+      color: #ffd700;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #ffd700;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🌙 Cadastro Astrológico</h1>
-    <p>Preencha seus dados para receber sua análise personalizada</p>
+    <h1>JORNADA ASTROCONSCIENTE</h1>
+    <p><strong>PREENCHA OS DADOS DO SEU MAPA</strong> para descobrir toda potência da sua Jornada.</p>
   </header>
 
   <main>
-    <form action="#" method="post" class="formulario">
-      <label for="nome">Nome completo:</label><br>
-      <input type="text" id="nome" name="nome" required><br><br>
+    <div class="instrucoes">
+      <p>
+        Caso você não saiba a estrutura do seu mapa recomendamos que acesse: 
+        <a href="https://www.astro.com/cgi/chart.cgi" target="_blank">https://astro.com</a>, faça seu mapa e retorne com as informações.
+      </p>
+      <p>
+        Lembre-se que essas informações serão utilizadas na geração do seu PROTOCOLO personalizado.
+      </p>
+    </div>
 
-      <label for="data">Data de nascimento:</label><br>
-      <input type="date" id="data" name="data" required><br><br>
+    <form id="mapaForm">
+   <label>🙋‍♀️ Nome completo:</label>
+   <input type="text" id="nome" placeholder="Ex: Maria Aparecida dos Santos" required>
 
-      <label for="hora">Hora de nascimento:</label><br>
-      <input type="time" id="hora" name="hora" required><br><br>
+      <label>📧 E-mail:</label>
+      <input type="email" id="email" placeholder="Ex: voce@email.com" required>
 
-      <label for="cidade">Cidade de nascimento:</label><br>
-      <input type="text" id="cidade" name="cidade" required><br><br>
+      <label>📱 WhatsApp:</label>
+      <input type="tel" id="whatsapp" placeholder="Ex: (11) 91234-5678" required>
 
-      <button type="submit" class="botao">Gerar meu mapa</button>
+      <label>☀️ Sol:</label>
+      <input type="text" id="sol" placeholder="Ex: Leão" required>
+
+      <label>🌙 Lua:</label>
+      <input type="text" id="lua" placeholder="Ex: Aquário" required>
+
+      <label>🌀 Ascendente:</label>
+      <input type="text" id="ascendente" placeholder="Ex: Gêmeos" required>
+
+      <label>💖 Vênus:</label>
+      <input type="text" id="venus" placeholder="Ex: Câncer" required>
+
+      <label>🔥 Marte:</label>
+      <input type="text" id="marte" placeholder="Ex: Escorpião" required>
+
+      <label>🧠 Mercúrio:</label>
+      <input type="text" id="mercurio" placeholder="Ex: Virgem" required>
+
+      <label>🪐 Saturno:</label>
+      <input type="text" id="saturno" placeholder="Ex: Capricórnio" required>
+
+      <label>🔭 Meio do Céu:</label>
+      <input type="text" id="mc" placeholder="Ex: Libra" required>
+
+      <button type="submit">✨ GERAR PROTOCOLOS ✨</button>
     </form>
-    <br>
-    <a href="index.html">← Voltar para Home</a>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Despertar Astroconsciente. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
