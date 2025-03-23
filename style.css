@@ -148,3 +148,12 @@ form input {
 .card:hover {
   transform: scale(1.05);
 }
+
+.linha-dourada {
+  border: none;
+  height: 4px;
+  background: linear-gradient(to right, #ffd700, #ffcc00);
+  margin: 2rem auto;
+  width: 90%;
+  border-radius: 4px;
+}
