@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jornada Comunicação Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🗣️ Jornada da Comunicação Social</h1>
+  <p>Desbloqueie uma semana por vez conforme avança. Esta jornada ativa seu Ascendente, Mercúrio e Meio do Céu para alinhar sua expressão com o seu propósito.</p>
+
+  <section id="semana1" class="semana">
+    <h2>Semana 1 – Ascendente: Presença e Imagem</h2>
+    <button class="dia-btn" onclick="toggleDia('dia1')">DIA 1 | Imagem que você projeta</button>
+    <div id="dia1" class="dia-content">
+      <p>Como você acredita que o mundo te vê? Como você gostaria de ser percebida(o)?</p>
+      <textarea placeholder="Escreva sua reflexão do dia 1..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(1, 'semana2')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana1" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana1')"></textarea>
+  </section>
+
+  <section id="semana2" class="semana" style="display:none;">
+    <h2>Semana 2 – Mercúrio: Voz e Comunicação</h2>
+    <button class="dia-btn" onclick="toggleDia('dia8')">DIA 8 | Como você se comunica?</button>
+    <div id="dia8" class="dia-content">
+      <p>Você se sente compreendida(o)? Como lida com a escuta ativa e o diálogo?</p>
+      <textarea placeholder="Escreva sua reflexão do dia 8..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(2, 'semana3')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana2" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana2')"></textarea>
+  </section>
+
+  <section id="semana3" class="semana" style="display:none;">
+    <h2>Semana 3 – Meio do Céu: Propósito e Missão</h2>
+    <button class="dia-btn" onclick="toggleDia('dia15')">DIA 15 | Seu lugar no mundo</button>
+    <div id="dia15" class="dia-content">
+      <p>Qual missão você sente que nasceu para viver? O que o mundo precisa ouvir de você?</p>
+      <textarea placeholder="Escreva sua reflexão do dia 15..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(3, 'semana4')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana3" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana3')"></textarea>
+  </section>
+
+  <section id="semana4" class="semana" style="display:none;">
+    <h2>Semana 4 – Integração e Visibilidade</h2>
+    <button class="dia-btn" onclick="toggleDia('dia22')">DIA 22 | Presença com Propósito</button>
+    <div id="dia22" class="dia-content">
+      <p>Como comunicar sua verdade com leveza, clareza e poder?</p>
+      <textarea placeholder="Escreva sua reflexão do dia 22..."></textarea><br>
+      <button class="concluir">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana4" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana4')"></textarea>
+  </section>
+
+  <section class="semana">
+    <h2>💌 Encerramento da Jornada</h2>
+    <p>Você pode enviar uma dúvida e solicitar seu desconto para um atendimento individual:</p>
+    <textarea placeholder="Escreva sua dúvida ou comentário final..."></textarea><br>
+    <button class="concluir">📩 ENVIAR</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

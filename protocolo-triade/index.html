@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jornada Tríade da Consciência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌞 Jornada da Tríade da Consciência</h1>
+  <p>Desbloqueie uma semana por vez conforme avança. Cada dia contém uma reflexão e espaço para anotações.</p>
+
+  <section id="semana1" class="semana">
+    <h2>Semana 1 – O Sol</h2>
+    <button class="dia-btn" onclick="toggleDia('dia1')">DIA 1 | Sua Luz Interior</button>
+    <div id="dia1" class="dia-content">
+      <p>Conteúdo explicativo do dia 1...</p>
+      <textarea placeholder="Escreva sua reflexão do dia 1..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(1, 'semana2')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana1" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana1')"></textarea>
+  </section>
+
+  <section id="semana2" class="semana" style="display:none;">
+    <h2>Semana 2 – A Lua</h2>
+    <button class="dia-btn" onclick="toggleDia('dia8')">DIA 8 | O Corpo da Emoção</button>
+    <div id="dia8" class="dia-content">
+      <p>Conteúdo explicativo do dia 8...</p>
+      <textarea placeholder="Escreva sua reflexão do dia 8..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(2, 'semana3')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana2" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana2')"></textarea>
+  </section>
+
+  <section id="semana3" class="semana" style="display:none;">
+    <h2>Semana 3 – O Ascendente</h2>
+    <button class="dia-btn" onclick="toggleDia('dia15')">DIA 15 | Imagem que você projeta</button>
+    <div id="dia15" class="dia-content">
+      <p>Conteúdo explicativo do dia 15...</p>
+      <textarea placeholder="Escreva sua reflexão do dia 15..."></textarea><br>
+      <button class="concluir" onclick="concluirDia(3, 'semana4')">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana3" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana3')"></textarea>
+  </section>
+
+  <section id="semana4" class="semana" style="display:none;">
+    <h2>Semana 4 – Integração</h2>
+    <button class="dia-btn" onclick="toggleDia('dia22')">DIA 22 | Integração dos Pilares</button>
+    <div id="dia22" class="dia-content">
+      <p>Conteúdo explicativo do dia 22...</p>
+      <textarea placeholder="Escreva sua reflexão do dia 22..."></textarea><br>
+      <button class="concluir">✔️ CONCLUÍDO</button>
+    </div>
+    <h3>📝 Diário da Semana</h3>
+    <textarea id="diario-semana4" placeholder="Anote tudo que quiser sobre sua semana..." onblur="salvarDiario('semana4')"></textarea>
+  </section>
+
+  <section class="semana">
+    <h2>💌 Encerramento da Jornada</h2>
+    <p>Você pode enviar uma dúvida e solicitar seu desconto para um atendimento individual:</p>
+    <textarea placeholder="Escreva sua dúvida ou comentário final..."></textarea><br>
+    <button class="concluir">📩 ENVIAR</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
