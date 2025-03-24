@@ -1,21 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro de Usuário - AstroConX</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de Usuário</title>
 </head>
-<body class="formulario">
-  <div class="form-container">
-    <h1>✨ Crie sua Conta</h1>
-    <form action="cadastro-mapa.html" method="GET">
-      <label>Nome completo:</label><input type="text" name="nome" required><br><br>
-      <label>E-mail:</label><input type="email" name="email" required><br><br>
-      <label>WhatsApp:</label><input type="text" name="whatsapp" required><br><br>
-      <label>Senha:</label><input type="password" name="senha" required><br><br>
-      <button type="submit">CRIAR CONTA</button>
-    </form>
-  </div>
+<body>
+  <h1>Cadastro de Usuário</h1>
+  <form id="cadastro-usuario">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>WhatsApp:</label><br>
+    <input type="text" name="whatsapp" required><br><br>
+
+    <label>Senha:</label><br>
+    <input type="password" name="senha" required><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script>
+    document.getElementById("cadastro-usuario").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const dados = {
+        nome: form.nome.value,
+        email: form.email.value,
+        whatsapp: form.whatsapp.value,
+        senha: form.senha.value
+      };
+      try {
+        const res = await fetch("http://localhost:3000/cadastro", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados)
+        });
+        if (res.ok) {
+          alert("Usuário cadastrado com sucesso!");
+          form.reset();
+        } else {
+          alert("Erro ao cadastrar.");
+        }
+      } catch (err) {
+        alert("Erro de conexão com o servidor.");
+      }
+    });
+  </script>
 </body>
 </html>

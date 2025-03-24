@@ -1,55 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Jornada Astroconsciente - Cadastro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Cadastro do Mapa Astral</title>
 </head>
 <body>
-  <header>
-    <h1>JORNADA ASTROCONSCIENTE</h1>
-    <p><strong>PREENCHA OS DADOS DO SEU MAPA</strong> para descobrir toda potência da sua Jornada.</p>
-  </header>
+  <h1>Cadastro do Mapa Astral</h1>
+  <form id="cadastro-mapa">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br><br>
 
-  <main>
-    <div class="instrucoes">
-      <p>
-        Caso você não saiba a estrutura do seu mapa recomendamos que acesse: 
-        <a href="https://www.astro.com/cgi/chart.cgi" target="_blank">https://astro.com</a>, faça seu mapa e retorne com as informações.
-      </p>
-      <p>
-        Lembre-se que essas informações serão utilizadas na geração do seu PROTOCOLO personalizado.
-      </p>
-    </div>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
 
-    <form id="mapaForm">
-      <label>☀️ Sol:</label>
-      <input type="text" id="sol" placeholder="Ex: Leão" required>
+    <label>WhatsApp:</label><br>
+    <input type="text" name="whatsapp" required><br><br>
 
-      <label>🌙 Lua:</label>
-      <input type="text" id="lua" placeholder="Ex: Aquário" required>
+    <label>Sol:</label><br><input type="text" name="sol"><br>
+    <label>Lua:</label><br><input type="text" name="lua"><br>
+    <label>Ascendente:</label><br><input type="text" name="ascendente"><br>
+    <label>Vênus:</label><br><input type="text" name="venus"><br>
+    <label>Marte:</label><br><input type="text" name="marte"><br>
+    <label>Mercúrio:</label><br><input type="text" name="mercurio"><br>
+    <label>Saturno:</label><br><input type="text" name="saturno"><br>
+    <label>Meio do Céu:</label><br><input type="text" name="meioDoCeu"><br><br>
 
-      <label>🌀 Ascendente:</label>
-      <input type="text" id="ascendente" placeholder="Ex: Gêmeos" required>
+    <button type="submit">Enviar</button>
+  </form>
 
-      <label>💖 Vênus:</label>
-      <input type="text" id="venus" placeholder="Ex: Câncer" required>
-
-      <label>🔥 Marte:</label>
-      <input type="text" id="marte" placeholder="Ex: Escorpião" required>
-
-      <label>🧠 Mercúrio:</label>
-      <input type="text" id="mercurio" placeholder="Ex: Virgem" required>
-
-      <label>🪐 Saturno:</label>
-      <input type="text" id="saturno" placeholder="Ex: Capricórnio" required>
-
-      <label>🔭 Meio do Céu:</label>
-      <input type="text" id="mc" placeholder="Ex: Libra" required>
-
-      <button type="submit">✨ GERAR PROTOCOLOS ✨</button>
-    </form>
-  </main>
+  <script>
+    document.getElementById("cadastro-mapa").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const dados = {
+        nome: form.nome.value,
+        email: form.email.value,
+        whatsapp: form.whatsapp.value,
+        sol: form.sol.value,
+        lua: form.lua.value,
+        ascendente: form.ascendente.value,
+        venus: form.venus.value,
+        marte: form.marte.value,
+        mercurio: form.mercurio.value,
+        saturno: form.saturno.value,
+        meioDoCeu: form.meioDoCeu.value
+      };
+      try {
+        const res = await fetch("http://localhost:3000/cadastro", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados)
+        });
+        if (res.ok) {
+          alert("Mapa astral cadastrado com sucesso!");
+          form.reset();
+        } else {
+          alert("Erro ao cadastrar.");
+        }
+      } catch (err) {
+        alert("Erro de conexão com o servidor.");
+      }
+    });
+  </script>
 </body>
 </html>
