@@ -1,0 +1,34 @@
+[
+    {
+        "titulo": "Protocolo Solar",
+        "categoria": "protocolo",
+        "descricao": "Ative sua potência interior com este protocolo transformador.",
+        "valor": "R$ 47,00",
+        "imagem": "img\/protocolo-solar.jpg",
+        "link_pagamento": "https:\/\/www.mercadopago.com.br\/checkout-solar"
+    },
+    {
+        "titulo": "E-book: Desperte com os Astros",
+        "categoria": "ebook",
+        "descricao": "Um guia prático de autoconhecimento astrológico.",
+        "valor": "Gratuito",
+        "imagem": "img\/ebook-astros.jpg",
+        "link_pagamento": "#"
+    },
+    {
+        "titulo": "Curso AstroConsciência Iniciática",
+        "categoria": "curso",
+        "descricao": "Curso completo para ativar sua jornada através do mapa astral.",
+        "valor": "R$ 297,00",
+        "imagem": "img\/curso-iniciatico.jpg",
+        "link_pagamento": "https:\/\/www.mercadopago.com.br\/checkout-curso"
+    },
+    {
+        "titulo": "Teste",
+        "categoria": "protocolo",
+        "descricao": "teste teste teste",
+        "valor": "97,00",
+        "imagem": "http:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcS0KI8Ji-LEonZbtjfXPy1KnnbL_eEjgy2bBQ&s",
+        "link_pagamento": "https:\/\/www.google.com\/"
+    }
+]
